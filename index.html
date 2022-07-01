@@ -7,55 +7,57 @@
   </head>
 
   <body>
-    <h1>Hello World!</h1>
+    <div class="menu-layout">
+      <h1>Hello World!</h1>
 
-    <h2 class="header">Menu</h2>
-    <table id="menu-table">
-      <tr>
-        <th>Name</th>
-        <th>Price</th>
-      </tr>
-      <tr>
-        <th>Tite burger</th>
-        <th>50€</th>
-      </tr>
-      <tr>
-        <th>Salad</th>
-        <th>100€</th>
-      </tr>
-      <tr>
-        <th>Meatlover burger</th>
-        <th>3€</th>
-      </tr>
-      <tr>
-        <th>Liverbox</th>
-        <th>1€</th>
-      </tr>
-      <tr>
-        <th>Vegan burger</th>
-        <th>300€</th>
-      </tr>
-    </table>
+      <h2 class="header">Menu</h2>
+      <table id="menu-table">
+        <tr>
+          <th>Name</th>
+          <th>Price</th>
+        </tr>
+        <tr>
+          <th>Tite burger</th>
+          <th>50€</th>
+        </tr>
+        <tr>
+          <th>Salad</th>
+          <th>100€</th>
+        </tr>
+        <tr>
+          <th>Meatlover burger</th>
+          <th>3€</th>
+        </tr>
+        <tr>
+          <th>Liverbox</th>
+          <th>1€</th>
+        </tr>
+        <tr>
+          <th>Vegan burger</th>
+          <th>300€</th>
+        </tr>
+      </table>
 
-    <h2 class="header">Reviews</h2>
-    <textarea type="textarea" id="idea"></textarea>
+      <h2 class="header">Reviews</h2>
+      <textarea type="textarea" id="idea"></textarea>
 
-    <button id="add-comment">Add new</button>
-    <button id="remove-comments">Remove</button>
-    <script>
-      document.getElementById("add-comment").onclick = function () {
-        var node = document.createElement("Li");
-        var text = document.getElementById("idea").value;
-        var textnode = document.createTextNode(text);
-        node.appendChild(textnode);
-        document.getElementById("list").appendChild(node);
-      };
-      document.getElementById("remove-comments").onclick = function () {
-        if (confirm("Delete commentst") == true) {
-          document.getElementById("list").innerHTML = "";
-        }
-      };
-    </script>
-    <ul id="list"></ul>
+      <button id="add-comment">Add new</button>
+      <button id="remove-comments">Remove</button>
+      <script>
+        document.getElementById("add-comment").onclick = function () {
+          var node = document.createElement("Li");
+          var text = document.getElementById("idea").value;
+          var textnode = document.createTextNode(text);
+          node.appendChild(textnode);
+          document.getElementById("list").appendChild(node);
+        };
+        document.getElementById("remove-comments").onclick = function () {
+          if (confirm("Delete commentst") == true) {
+            document.getElementById("list").innerHTML = "";
+          }
+        };
+      </script>
+      <ul id="list"></ul>
+    </div>
   </body>
 </html>
