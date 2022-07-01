@@ -15,6 +15,6 @@ body {
 #menu-table tr:nth-child(even) {
   background-color: gainsboro;
 }
-#menu-table tr:first-child {
+#menu-table th.header {
   background-color: aqua;
 }
