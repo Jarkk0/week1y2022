@@ -12,9 +12,9 @@ body {
   padding-top: 2px;
   padding-bottom: 2px;
 }
-#menu-table tr:nth-child(even) {
+#menu-table tr {
   background-color: gainsboro;
 }
-#menu-table th.header {
+#menu-table th {
   background-color: aqua;
 }
