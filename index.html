@@ -47,8 +47,9 @@
         document.getElementById("list").appendChild(node);
       };
       document.getElementById("remove-comments").onclick = function () {
-        confirm("Delete commentst");
-        document.getElementById("list").innerHTML = "";
+        if (confirm("Delete commentst") == true) {
+          document.getElementById("list").innerHTML = "";
+        }
       };
     </script>
     <ul id="list"></ul>
