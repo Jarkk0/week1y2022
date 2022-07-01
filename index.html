@@ -37,7 +37,7 @@
     <textarea type="textarea" id="idea"></textarea>
 
     <button id="add-comment">Add new</button>
-
+    <button id="remove-comments">Remove</button>
     <script>
       document.getElementById("add-comment").onclick = function () {
         var node = document.createElement("Li");
@@ -45,6 +45,10 @@
         var textnode = document.createTextNode(text);
         node.appendChild(textnode);
         document.getElementById("list").appendChild(node);
+      };
+      document.getElementById("remove-comments").onclick = function () {
+        confirm("Delete commentst");
+        document.getElementById("list").innerHTML = "";
       };
     </script>
     <ul id="list"></ul>
