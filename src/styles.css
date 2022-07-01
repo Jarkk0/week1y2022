@@ -8,4 +8,13 @@ body {
 
 #menu-table {
   text-align: left;
+  background-color: #f2f2f2;
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+#menu-table tr:nth-child(even) {
+  background-color: gainsboro;
+}
+#menu-table tr:first-child {
+  background-color: aqua;
 }
