@@ -43,6 +43,12 @@
 
       <button id="add-comment">Add new</button>
       <button id="remove-comments">Remove</button>
+
+      <select name="rating">
+        <option value="1" id="rNro">1</option>
+        <option value="2" id="rNro">2</option>
+        <option value="3" id="rNro">3</option>
+        <option value="4" id="rNro">4</option>
       <script>
         document.getElementById("add-comment").onclick = function () {
           var node = document.createElement("Li");
@@ -50,6 +56,10 @@
           var textnode = document.createTextNode(text);
           node.appendChild(textnode);
           document.getElementById("list").appendChild(node);
+
+          var rating = document.createElement("input");
+          var rating_text = document.getElementById("rNro").value;
+          document.getElementById("ratingNro").appendChild(node);
         };
         document.getElementById("remove-comments").onclick = function () {
           if (confirm("Delete commentst") == true) {
@@ -57,7 +67,16 @@
           }
         };
       </script>
-      <ul id="list"></ul>
+      <div class="comment">
+        <div class="comment-rating">
+          <input id="ratingNro"></input>
+        </div>
+        <div class="comment-text">
+            <ul id="list"></ul>
+        </div>
+
+      
+    </div>
     </div>
   </body>
 </html>
